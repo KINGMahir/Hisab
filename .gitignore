@@ -1,0 +1,25 @@
+# Build
+build/
+cmake-build-*/
+
+# Runtime databases / local state
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test/runtime output
+*.log
+coverage/
+
+# Generated exports
+*.csv
