@@ -29,3 +29,24 @@ target_compile_options(pos_inventory PRIVATE
 )
 
 enable_testing()
+
+# Database runtime test
+add_executable(database_test
+    tests/database/database_test.cpp
+    src/database/Database.cpp
+    src/database/Migrations.cpp
+)
+
+target_include_directories(database_test PRIVATE
+    src
+)
+
+target_link_libraries(database_test PRIVATE
+    SQLite::SQLite3
+)
+
+target_compile_options(database_test PRIVATE
+    -Wall
+    -Wextra
+    -Wpedantic
+)
